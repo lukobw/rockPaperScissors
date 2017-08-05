@@ -1,0 +1,14 @@
+.container{
+	padding: 25px;
+}
+
+body {
+	background-color: darkslategray;
+}
+h3 {
+	color: white
+}
+
+#js-resultsTableElement {
+	color: white;
+}
