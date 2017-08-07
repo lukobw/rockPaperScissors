@@ -4,6 +4,8 @@
 
 body {
 	background-color: darkslategray;
+	font-size: 16px;
+
 }
 h3 {
 	color: white
@@ -11,4 +13,17 @@ h3 {
 
 #js-resultsTableElement {
 	color: white;
+}
+
+.modal-title {
+	text-align: center;
+}
+
+.text-center {
+	font-size: 3rem;
+}
+
+.modal-body {
+	text-align: center;
+
 }

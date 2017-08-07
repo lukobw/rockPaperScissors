@@ -20,7 +20,7 @@
 	</div>
 	<div id="js-newGameElement" class="container">
 		<div class="row text-center">
-			<button id="js-newGameButton" class="btn bnt-default">New Game</button>
+			<button id="js-newGameButton" class="btn bnt-info">New Game</button>
 		</div>
 	</div>
 	<br>
@@ -93,6 +93,48 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="js-myModalWin" class="modal fade" tabindex="-1" role="document" data-backdrop="static">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Winner!</h4>
+				</div>
+				<div class="modal-body">
+					<p>You won!</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+				</div>
+    		</div>
+  		</div>
+	</div>
+
+<div id="js-myModalLose" class="modal fade" tabindex="-1" role="document" data-backdrop="static">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Looser!</h4>
+				</div>
+				<div class="modal-body">
+					<p>You lost!</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+    		</div>
+  		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="script.js"></script>
 </body>
 </html>

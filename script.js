@@ -20,8 +20,9 @@ pickScissors.addEventListener('click', function () {
 
 var gameState = 'notStarted',
     player = {
-        name: '',
+        name: 'string',
         score: 0
+
     },
     computer = {
         score: 0
@@ -58,8 +59,19 @@ var playerPointsElem = document.getElementById('js-playerPoints'),
     computerPointsElem = document.getElementById('js-computerPoints');
 
 function newGame() {
-    player.name = prompt('Please enter your name', 'player name');
-    games.number = prompt('How many games do you wanna play', 'Games');
+
+    player.name = (prompt('Please enter your name:'));
+
+
+    if (!/^[a-z]+$/i.test(player.name)) {
+        alert('Only letters!');
+        prompt('Please enter your name:');
+    }
+
+    do {
+        games.number = parseInt(prompt('How many games do you wanna play?'));
+    } while (isNaN(games.number));
+
     if (player.name && games.number) {
         player.score = computer.score = 0;
         gameState = 'started';
@@ -133,13 +145,31 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 
+var myModalWin = document.getElementById('js-myModalWin');
+var myModalLose = document.getElementById('js-myModalLose');
+
+$('#js-myModalWin').dialog({
+    height: 140,
+    modal: true,
+    autoOpen: false,
+    open: gameEnd()
+});
+
+$('#js-myModalLose').dialog({
+    height: 140,
+    modal: true,
+    autoOpen: false,
+    open: gameEnd()
+});
+
 function gameEnd() {
     if (player.score == games.number) {
-        alert('The winner is ' + player.name + '!');
+        $(myModalWin).modal('show');
         gameState = 'ended';
     } else if (computer.score == games.number) {
-        alert('The winner is Computer!');
+        $(myModalLose).modal('show');
         gameState = 'ended';
     }
     setGameElements();
 }
+
