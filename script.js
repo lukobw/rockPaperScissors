@@ -148,18 +148,20 @@ function setGamePoints() {
 var myModalWin = document.getElementById('js-myModalWin');
 var myModalLose = document.getElementById('js-myModalLose');
 
-$('#js-myModalWin').dialog({
+$('#js-myModalWin').modal({
     height: 140,
     modal: true,
     autoOpen: false,
-    open: gameEnd()
+    show: false
+
 });
 
-$('#js-myModalLose').dialog({
+$('#js-myModalLose').modal({
     height: 140,
     modal: true,
     autoOpen: false,
-    open: gameEnd()
+    show: false
+    
 });
 
 function gameEnd() {
